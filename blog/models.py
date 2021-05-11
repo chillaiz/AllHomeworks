@@ -18,7 +18,7 @@ class Product(models.Model):
         verbose_name = 'продукт'
         verbose_name_plural = 'продукт'
     title = models.CharField(max_length=200, verbose_name="Название")
-    description = models.TextField()
+    description = models.TextField(verbose_name="описание")
     price = models.IntegerField(default=0)
     category = models.ForeignKey(Category, null=True, on_delete=models.SET_NULL)
 

@@ -25,7 +25,7 @@ def get_posts(request):
         'products': products
     }
 
-    return render(request, 'index
+    return render(request, 'index.html', context=data)
 def get_post(request, id):
     product = Product.objects.get(id=id)
 
@@ -34,3 +34,7 @@ def get_post(request, id):
     }
 
     return render(request, 'post.html', context=data)
+
+
+def add_course(request):
+    return  render(request, 'add.html')
